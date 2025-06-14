@@ -190,8 +190,8 @@
                     this.error = null;
 
                     try {
-                        // Use deployed Vercel API
-                        const API_ENDPOINT = window.location.origin + '/api/moderate';
+                        // Use deployed Vercel API - works both locally and in production
+                        const API_ENDPOINT = '/api/moderate';
                         
                         const response = await fetch(API_ENDPOINT, {
                             method: 'POST',
