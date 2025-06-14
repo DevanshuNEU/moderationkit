@@ -26,7 +26,7 @@ ModerationKit uses **platform-specific intelligence** to understand context:
 
 ## 🚀 Live Demo
 
-**[Try it live here!](https://moderationkit-demo.vercel.app)**
+**[Try it live here!](https://moderationkit.vercel.app/)**
 
 Test these scenarios:
 1. Fantasy roleplay content on Character.ai
