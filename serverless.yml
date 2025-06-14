@@ -1,0 +1,39 @@
+service: moderationkit
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: ${opt:stage, 'dev'}
+  region: us-east-1
+  environment:
+    OPENAI_API_KEY: ${env:OPENAI_API_KEY, 'placeholder-will-be-set-after-deployment'}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - logs:CreateLogGroup
+            - logs:CreateLogStream
+            - logs:PutLogEvents
+          Resource: '*'
+
+functions:
+  moderate:
+    handler: src/handler.moderate
+    events:
+      - http:
+          path: /moderate
+          method: post
+          cors: true
+  health:
+    handler: src/handler.health
+    events:
+      - http:
+          path: /health
+          method: get
+          cors: true
+
+plugins:
+  - serverless-plugin-typescript
