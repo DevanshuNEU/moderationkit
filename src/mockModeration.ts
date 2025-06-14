@@ -46,11 +46,21 @@ export class MockModerationEngine {
     const flaggedPhrases: string[] = [];
 
     // Toxicity detection
-    const toxicWords = ['idiot', 'stupid', 'garbage', 'trash', 'braindead', 'moron'];
+    const toxicWords = ['idiot', 'stupid', 'garbage', 'trash', 'braindead', 'moron', 'fuck', 'shit', 'bitch', 'asshole', 'damn'];
+    const severeWords = ['fuck you', 'motherfucker', 'go fuck yourself', 'kill yourself'];
+    
     toxicWords.forEach(word => {
       if (content.includes(word)) {
-        toxicity += 25;
+        toxicity += 30;
         flaggedPhrases.push(word);
+      }
+    });
+
+    severeWords.forEach(phrase => {
+      if (content.includes(phrase)) {
+        toxicity += 60;
+        harassment += 50;
+        flaggedPhrases.push(phrase);
       }
     });
 

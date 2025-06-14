@@ -11,6 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.54.0",
     "aws-lambda": "^1.0.7",
     "axios": "^1.6.0",
     "cors": "^2.8.5",
