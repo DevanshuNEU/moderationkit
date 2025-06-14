@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.env.local
+.serverless/
+*.log
+.DS_Store
+coverage/
+*.tgz
+.nyc_output
+.vscode/
+.idea/
