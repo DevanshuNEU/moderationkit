@@ -122,6 +122,6 @@ I'm not just applying for an internship - I'm already contributing to your missi
 **Devanshu Chicholikar**  
 📧 chicholikar.d@northeastern.edu  
 📱 (857) 339-8803  
-💻 [GitHub](https://github.com/yourusername) | [LinkedIn](https://linkedin.com/in/yourprofile)
+💻 [GitHub](https://github.com/DevanshuNEU) | [LinkedIn](https://linkedin.com/in/devanshu-chicholikar)
 
 *P.S. - I'm happy to deploy this API live if you want to test it with real traffic. Just need 10 minutes with AWS credentials.*
